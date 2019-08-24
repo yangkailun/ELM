@@ -8,3 +8,4 @@ Whoever else may object,I mean to do it.%不管还有谁反对，我都会去做
 Have you any money on you?%你身上带钱了吗？
 They exchanged few words.%他们没交谈几句。
 They had very little money.%他们没几个钱。
+The story is long,you don't panic first.%故事还长，你先别慌。 
