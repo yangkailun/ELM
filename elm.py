@@ -44,9 +44,16 @@ def show_call_back():
         count -= 1
     if e_or_c == 0:
         var_english.set(keys[key_num])
+        if count == 0:    # 如果点击第二次show按钮显示英语
+            if entry_english.get() == keys[key_num]:
+                var_english_entry.set(entry_english.get() + " True")
+            else:
+                var_english_entry.set(entry_english.get() + " False")
         e_or_c += 1
     elif e_or_c == 1:
         var_chinese.set(example[keys[key_num]])
+        if count == 1:    #在汉译英模式下，显示汉语时
+            var_english_entry.set('')
         e_or_c -= 1
 
 ## 通过改变EC的值，在英译汉与汉译英之间切换
@@ -92,7 +99,8 @@ show_button.pack()
 change_button.pack()
 
 ## 定义并放置输入英语和汉语的文本框
-entry_english = tk.Entry(root, width = 80, font = ("黑体",24))
+var_english_entry = tk.StringVar()
+entry_english = tk.Entry(root, width = 80, font = ("黑体",24), textvariable = var_english_entry)
 entry_english.pack()
 entry_chinese = tk.Entry(root, width = 50, font = ("宋体",14))
 entry_chinese.pack()
